@@ -1,0 +1,45 @@
+{
+  "name": "hexi-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate for hexi with typescript, tslint and pretier\u001b[D\u001b[D\u001b[Dt\u001b[C\u001b[C\u001b[C\u001b[D prettier.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint --project && prettier --write",
+    "build": "npm run lint && tsc"
+  },
+  "keywords": [
+    "hexi",
+    "pixi",
+    "typescript",
+    "tslint",
+    "prettier"
+  ],
+  "author": "fj68",
+  "license": "WTFPL",
+  "engines": {
+    "node": "8.12.0"
+  },
+  "devDependencies": {
+    "husky": "^1.1.1",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-plugin-prettier": "^2.0.0",
+    "typescript": "^3.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tslint --project",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
