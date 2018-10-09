@@ -5,7 +5,7 @@ Hexi + Typescript + tslint + prettier = Modern env for easy game dev!
 ## Install
 
 ```
-git clone ''
+git clone 'https://github.com/fj68/hexi-typescript-boilerplate.git'
 cd hexi-typescript-boilerplate
 npm install
 ```
