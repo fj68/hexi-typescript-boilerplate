@@ -1,12 +1,14 @@
 {
-  "extends": [
-    "tslint-config-standard",
-    "tslint-config-prettier"
-  ],
-  "rulesDirectory": [
-      "tslint-plugin-prettier"
-  ],
+  "extends": ["tslint-config-standard", "tslint-config-prettier"],
+  "rulesDirectory": ["tslint-plugin-prettier"],
   "rules": {
-      "prettier": true
+    "prettier": [
+      true,
+      {
+        "singleQuote": true,
+        "semi": false,
+        "tabWidth": 2
+      }
+    ]
   }
 }

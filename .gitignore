@@ -1,3 +1,4 @@
 node_modules/
+.node_version
 npm-debug.log
 .DS_Store

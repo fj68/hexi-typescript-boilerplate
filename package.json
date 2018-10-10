@@ -1,34 +1,44 @@
 {
-  "name": "hexi-typescript-boilerplate",
+  "name": "pixi-typescript-boilerplate",
   "version": "1.0.0",
-  "description": "boilerplate for hexi with typescript, tslint and pretier\u001b[D\u001b[D\u001b[Dt\u001b[C\u001b[C\u001b[C\u001b[D prettier.",
+  "description": "boilerplate for pixi with typescript, tslint and prettier.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "tslint --project && prettier --write",
-    "build": "npm run lint && tsc"
+    "test": "echo 'No test specified yet.' && exit 1",
+    "tsc": "tsc",
+    "tslint": "tslint",
+    "webpack": "webpack",
+    "lint": "tslint --fix --project .",
+    "build": "npm run lint && webpack -p",
+    "start": "npm run lint && webpack-dev-server -d --hot --inline",
+    "clean": "rm -r ./build"
   },
   "keywords": [
-    "hexi",
     "pixi",
     "typescript",
     "tslint",
     "prettier"
   ],
   "author": "fj68",
-  "license": "WTFPL",
-  "engines": {
-    "node": "8.12.0"
-  },
+  "license": "MIT",
+  "repository": "",
   "devDependencies": {
+    "@types/pixi.js": "^4.8.1",
+    "copy-webpack-plugin": "^4.5.3",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "husky": "^1.1.1",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
+    "ts-loader": "^5.2.1",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-config-standard": "^8.0.1",
     "tslint-plugin-prettier": "^2.0.0",
-    "typescript": "^3.1.1"
+    "typescript": "^3.1.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "husky": {
     "hooks": {
@@ -37,9 +47,11 @@
   },
   "lint-staged": {
     "*.ts": [
-      "tslint --project",
-      "prettier --write",
+      "npm run lint",
       "git add"
     ]
+  },
+  "dependencies": {
+    "pixi.js": "^4.8.2"
   }
 }
