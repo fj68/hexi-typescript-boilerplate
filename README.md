@@ -14,7 +14,7 @@ npm install
 
  - Easy and fast sprite rendering on WebGL/Canvas with Pixi
  - Type-safe code with Typescript
- - Lint and prettify code automatically before `git commit`
+ - Automatic lint and code prettification before `git commit`
  - Hot-Reloading and development/production code management with Webpack
 
 ## What's inside
